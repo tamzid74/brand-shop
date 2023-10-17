@@ -7,6 +7,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import SocialLogin from "../social/SocialLogin";
 
 
+
 const Login = () => {
   const { signIn } = useContext(AuthContext);
   const [emailError, setEmailError] = useState("");
