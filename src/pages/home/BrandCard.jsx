@@ -13,7 +13,6 @@ const BrandCard = ({ brand }) => {
     </div>
   );
 };
-
 export default BrandCard;
 BrandCard.propTypes = {
   brand: PropTypes.object,
