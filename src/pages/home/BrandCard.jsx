@@ -5,7 +5,7 @@ const BrandCard = ({ brand }) => {
   return (
     <div className="card bg-base-100 shadow-xl">
       <figure>
-        <img src={brandImage} alt={brandName} />
+        <img className="w-full" src={brandImage} alt={brandName} />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{brandName}</h2>

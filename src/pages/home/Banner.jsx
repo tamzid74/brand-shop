@@ -1,27 +1,25 @@
-
-
+import image from "../../assets/Image/aaron-burden-yFnX8DaC3UM-unsplash.jpg";
 
 const Banner = () => {
-    
   return (
     <div
       className="hero min-h-screen"
       style={{
-        backgroundImage:
-        "url(https://unsplash.com/photos/gavODTHG36Y)",
-       
+        backgroundImage: `url(${image})`,
       }}
     >
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-          <p className="mb-5">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+          <p className="mb-5 font-semibold">
+            Together, technology and electronics have revolutionized the way we
+            live, work, and interact, enabling communication across the globe,
+            improving healthcare, enhancing productivity, and advancing
+            scientific research. The rapid pace of innovation in these fields
+            continues to shape our future and drive progress in numerous
+            industries.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <button className="btn btn-outline btn-sm">Shop Now</button>
         </div>
       </div>
     </div>
