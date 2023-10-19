@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import SocialLogin from "../social/SocialLogin";
-import { AuthContext } from "../../provider/AuthProvider";
+import { AuthContext } from "../provider/AuthProvider";
 
 
 const Registration = () => {

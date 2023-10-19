@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
-import { AuthContext } from "../../provider/AuthProvider";
+import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import SocialLogin from "../social/SocialLogin";

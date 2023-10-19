@@ -1,11 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../layout/Root";
 import Error from "../layout/Error";
-import Home from "../pages/home/Home";
-import AddProduct from "../pages/addProduct/AddProduct";
-import MyCart from "../pages/myCart/MyCart";
-import Login from "../pages/login/Login";
-import Registration from "../pages/registration/Registration";
+import Home from "../home/Home";
+import AddProduct from "../pages/AddProduct";
+import MyCart from "../myCart/MyCart";
+import Login from "../login/Login";
+import Registration from "../registration/Registration";
+import UpdateProduct from "../pages/UpdateProduct";
+import Products from "../pages/Products";
 
 const router = createBrowserRouter([
   {
@@ -19,8 +21,16 @@ const router = createBrowserRouter([
         loader: () => fetch("/brands.json"),
       },
       {
+        path: "/products/:brandName",
+        element: <Products></Products>,
+      },
+      {
         path: "/addProduct",
         element: <AddProduct></AddProduct>,
+      },
+      {
+        path: "/updateProduct",
+        element: <UpdateProduct></UpdateProduct>,
       },
       {
         path: "/myCart",

@@ -1,11 +1,11 @@
 import Marquee from "react-fast-marquee";
 
-import logo1 from "../../assets/icons/apple.png";
-import logo2 from "../../assets/icons/samsung.png";
-import logo3 from "../../assets/icons/intel.png";
-import logo4 from "../../assets/icons/sony.png";
-import logo5 from "../../assets/icons/nokia.png";
-import logo6 from "../../assets/icons/social.png";
+import logo1 from "../assets/icons/apple.png";
+import logo2 from "../assets/icons/samsung.png";
+import logo3 from "../assets/icons/intel.png";
+import logo4 from "../assets/icons/sony.png";
+import logo5 from "../assets/icons/nokia.png";
+import logo6 from "../assets/icons/social.png";
 
 const BrandIcons = () => {
   return (

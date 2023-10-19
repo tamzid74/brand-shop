@@ -1,11 +1,11 @@
-import icon1 from "../../assets/icons/free-delivery.png";
-import icon2 from "../../assets/icons/secure-payment.png";
-import icon3 from "../../assets/icons/help-desk.png";
-import icon4 from "../../assets/icons/shield.png";
+import icon1 from "../assets/icons/free-delivery.png";
+import icon2 from "../assets/icons/secure-payment.png";
+import icon3 from "../assets/icons/help-desk.png";
+import icon4 from "../assets/icons/shield.png";
 
 const Services = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-4 mt-10">
+    <div className="flex flex-col md:flex-row gap-4 mt-20">
       {/* {card-1} */}
       <div className="card card-compact w-full">
         <figure>

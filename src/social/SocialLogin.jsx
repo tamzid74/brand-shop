@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { BsGoogle } from "react-icons/bs";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../../provider/AuthProvider";
+import { AuthContext } from "../provider/AuthProvider";
 
 const SocialLogin = () => {
     const { googleLogin } = useContext(AuthContext);

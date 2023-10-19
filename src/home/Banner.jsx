@@ -1,4 +1,4 @@
-import image from "../../assets/Image/aaron-burden-yFnX8DaC3UM-unsplash.jpg";
+import image from "../assets/Image/aaron-burden-yFnX8DaC3UM-unsplash.jpg";
 
 const Banner = () => {
   return (

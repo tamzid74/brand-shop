@@ -3,7 +3,6 @@ import BrandCard from "./BrandCard";
 
 const Brands = () => {
   const brands = useLoaderData();
-  console.log(brands);
   return (
     <div>
       <h1 className="md:text-6xl text-2xl text-center font-extrabold mt-10">

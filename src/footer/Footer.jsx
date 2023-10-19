@@ -1,4 +1,4 @@
-import footerLogo from "../../assets/icons/rsz_devices.png";
+import footerLogo from "../assets/icons/rsz_devices.png";
 
 const Footer = () => {
   return (
