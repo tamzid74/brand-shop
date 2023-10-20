@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 import PropTypes from "prop-types";
 import { AiFillDelete } from "react-icons/ai";
 import Swal from "sweetalert2";
 
-const MyCartCard = ({ cart }) => {
-  const { _id, name, photo, brandName, price, rating, type } = cart.product;
+const MyCartCard = ({ cart, carts, setCarts }) => {
+  const { _id, name, photo, brandName, price, rating, type } = cart;
+  console.log(carts)
   const handleDelete = (_id) => {
     console.log(_id);
     Swal.fire({
@@ -24,6 +26,11 @@ const MyCartCard = ({ cart }) => {
             console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "Your file has been deleted.", "success");
+
+              const remaining = carts.filter(
+                (singleCart) => singleCart._id !== _id
+              );
+              setCarts(remaining);
             }
           });
       }

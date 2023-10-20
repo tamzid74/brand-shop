@@ -1,11 +1,15 @@
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../provider/AuthProvider";
 
 const ProductDetails = () => {
+  const { user } = useContext(AuthContext);
   const product = useLoaderData();
-  const {_id, name, shortDescription, photo, rating, price } = product;
+  const { name, shortDescription, photo, rating, price } = product;
   const handleAddToCart = () => {
-    const myCart = { _id };
+    const myCart = { ...product, user: user.email };
+    delete myCart._id;
     fetch("http://localhost:5000/carts", {
       method: "POST",
       headers: {
@@ -39,7 +43,10 @@ const ProductDetails = () => {
             <div className="badge badge-secondary badge-outline font-bold text-base">
               {rating}
             </div>
-            <p className="ml-10 text-lg"><span className="font-bold">Price:</span>{price}</p>
+            <p className="ml-10 text-lg">
+              <span className="font-bold">Price:</span>
+              {price}
+            </p>
           </div>
 
           <p>{shortDescription}</p>
