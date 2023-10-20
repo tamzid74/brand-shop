@@ -3,9 +3,9 @@ import Swal from "sweetalert2";
 
 const ProductDetails = () => {
   const product = useLoaderData();
-  const { name, shortDescription, photo } = product;
+  const {_id, name, shortDescription, photo, rating, price } = product;
   const handleAddToCart = () => {
-    const myCart = { product };
+    const myCart = { _id };
     fetch("http://localhost:5000/carts", {
       method: "POST",
       headers: {
@@ -34,6 +34,14 @@ const ProductDetails = () => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
+
+          <div className="flex items-center mt-2 mb-2">
+            <div className="badge badge-secondary badge-outline font-bold text-base">
+              {rating}
+            </div>
+            <p className="ml-10 text-lg"><span className="font-bold">Price:</span>{price}</p>
+          </div>
+
           <p>{shortDescription}</p>
           <div className="card-actions justify-end mt-4">
             <button
