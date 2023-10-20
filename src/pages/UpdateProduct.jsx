@@ -27,30 +27,30 @@ const UpdateProduct = () => {
     };
     console.log(updateProduct);
 
-    // fetch(`http://localhost:5000/products/${_id}`, {
-    //   method: "Put",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(updateProduct),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //     if (data.insertedId) {
-    //       Swal.fire({
-    //         title: "Success!",
-    //         text: "Product Update successfully",
-    //         icon: "success",
-    //         confirmButtonText: "Cool",
-    //       });
-    //     }
-    //   });
+    fetch(`http://localhost:5000/update/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updateProduct),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount > 0) {
+          Swal.fire({
+            title: "Success!",
+            text: "Product Update successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
+      });
   };
   return (
     <div className="max-w-6xl mx-auto p-5">
       <h1 className="text-3xl text-center font-extrabold mb-5 border-b-2 p-2">
-        Add Product
+        Update Product
       </h1>
       <form onSubmit={handleUpdate}>
         {/* {row-1} */}
