@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 const MyCartCard = ({ cart, carts, setCarts }) => {
   const { _id, name, photo, brandName, price, rating, type } = cart;
-  console.log(carts)
+  //   console.log(carts)
   const handleDelete = (_id) => {
     console.log(_id);
     Swal.fire({
@@ -18,19 +18,18 @@ const MyCartCard = ({ cart, carts, setCarts }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/carts/${_id}`, {
+        fetch(`https://tec-zone-shop-server.vercel.app/carts/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "Your file has been deleted.", "success");
 
               const remaining = carts.filter(
-                (singleCart) => singleCart._id !== _id
+                (cart) => console.log(cart._id) !== _id
               );
-              setCarts(remaining);
+              console.log(setCarts(remaining));
             }
           });
       }

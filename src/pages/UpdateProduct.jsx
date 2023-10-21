@@ -27,7 +27,7 @@ const UpdateProduct = () => {
     };
     console.log(updateProduct);
 
-    fetch(`http://localhost:5000/update/${_id}`, {
+    fetch(`https://tec-zone-shop-server.vercel.app/update/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -34,18 +34,18 @@ const router = createBrowserRouter([
         path: "/updateProduct/:id",
         element: <PrivateRoutes><UpdateProduct></UpdateProduct></PrivateRoutes>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(`https://tec-zone-shop-server.vercel.app/product/${params.id}`),
       },
       {
         path: "/productDetails/:id",
         element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(`https://tec-zone-shop-server.vercel.app/product/${params.id}`),
       },
       {
         path: "/myCart",
         element: <PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
-        loader:()=>fetch('http://localhost:5000/carts')
+        loader:()=>fetch('https://tec-zone-shop-server.vercel.app/carts')
       },
       {
         path: "/login",

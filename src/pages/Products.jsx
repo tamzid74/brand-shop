@@ -9,7 +9,7 @@ const Products = () => {
   const [loading, setLoading] = useState(true);
   const { brandName } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${brandName}`)
+    fetch(`https://tec-zone-shop-server.vercel.app/products/${brandName}`)
       .then((res) => res.json())
       .then((data) => {
         setProductData(data);

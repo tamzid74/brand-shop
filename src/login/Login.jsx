@@ -2,9 +2,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
-import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import SocialLogin from "../social/SocialLogin";
+import Swal from "sweetalert2";
 
 
 
@@ -40,7 +40,22 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         console.log(result.user);
-        toast.success("login Successfully");
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
+          },
+        });
+
+        Toast.fire({
+          icon: "success",
+          title: "Signed in successfully",
+        });
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {

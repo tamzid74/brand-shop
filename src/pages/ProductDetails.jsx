@@ -10,7 +10,7 @@ const ProductDetails = () => {
   const handleAddToCart = () => {
     const myCart = { ...product, user: user.email };
     delete myCart._id;
-    fetch("http://localhost:5000/carts", {
+    fetch("https://tec-zone-shop-server.vercel.app/carts", {
       method: "POST",
       headers: {
         "content-type": "application/json",
