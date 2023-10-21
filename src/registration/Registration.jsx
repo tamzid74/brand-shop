@@ -50,7 +50,7 @@ const Registration = () => {
 
           Toast.fire({
             icon: "success",
-            title: "Signed up successfully",
+            title: "Signed in successfully",
           });
           navigate(`/`);
         });
