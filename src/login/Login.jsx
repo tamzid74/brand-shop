@@ -4,9 +4,8 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import SocialLogin from "../social/SocialLogin";
-import Swal from "sweetalert2";
-
-
+// import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -37,25 +36,27 @@ const Login = () => {
       return;
     }
 
+    const toastId = toast.loading("logging in...");
     signIn(email, password)
       .then((result) => {
         console.log(result.user);
-        const Toast = Swal.mixin({
-          toast: true,
-          position: "top-end",
-          showConfirmButton: false,
-          timer: 3000,
-          timerProgressBar: true,
-          didOpen: (toast) => {
-            toast.addEventListener("mouseenter", Swal.stopTimer);
-            toast.addEventListener("mouseleave", Swal.resumeTimer);
-          },
-        });
+        // const Toast = Swal.mixin({
+        //   toast: true,
+        //   position: "top-end",
+        //   showConfirmButton: false,
+        //   timer: 3000,
+        //   timerProgressBar: true,
+        //   didOpen: (toast) => {
+        //     toast.addEventListener("mouseenter", Swal.stopTimer);
+        //     toast.addEventListener("mouseleave", Swal.resumeTimer);
+        //   },
+        // });
 
-        Toast.fire({
-          icon: "success",
-          title: "Signed in successfully",
-        });
+        // Toast.fire({
+        //   icon: "success",
+        //   title: "Signed in successfully",
+        // });
+        toast.success("Logged in...", { id: toastId });
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {

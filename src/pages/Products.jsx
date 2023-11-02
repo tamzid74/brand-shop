@@ -27,7 +27,7 @@ const Products = () => {
         </>
       ) : (
         <>
-          <div className="max-w-6xl mx-auto p-5 mt-10">
+          <div className="max-w-6xl mx-auto p-5 mt-10 ">
             <div className="mt-10">
               <SwiperSlider></SwiperSlider>
             </div>
