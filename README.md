@@ -6,7 +6,7 @@ Welcome to Tech Zone Shop, a feature-rich e-commerce website built with React, R
 Click here for the live site: [https://technology-electronics-store.web.app/](https://technology-electronics-store.web.app/)
 
 
-# Feature Of my site
+#🚩	:triangular_flag_on_post: Feature Of my site
 - Responsive Design: Enjoy a consistent and user-friendly experience across devices. Tech Zone Shop is designed to adapt to every screen size, ensuring accessibility from desktops to smartphones.
 
 - Dark Mode: Switch between light and dark themes to customize your browsing experience. Whether you prefer a sleek dark interface or a classic light one, Tech Zone Shop has you covered.
